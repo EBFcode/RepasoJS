@@ -2,15 +2,17 @@
 let ver = document.getElementById('ver');
 // For 
 
-function repetidor(condicion, funcion){
+// for(inicio ; condicion; actualizacion ){
+//     //codigo
+// }
+
+function repetidor(condicion, funsion){
     for(let i = 1; i <= condicion; i++){
-        funcion();
+        funsion();
     }
 }
 
-// Eventos
-
-function crearPost(){
+crearPost = () => {
     let contenedorCajas = document.getElementById('contenedorCajas');
     let caja = document.createElement('div');
     caja.className = 'caja';
@@ -18,6 +20,6 @@ function crearPost(){
 }
 
 
-ver.addEventListener('click', crearPost);
+ver.addEventListener('click',() => repetidor(4, crearPost));
 
 
